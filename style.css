@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0px;
 }
 .container {
@@ -8,7 +8,6 @@ body {
 }
 
 #carousels {
-  /* position: relative; */
   height: 100vh;
   padding: 0px;
   margin: 0px;
@@ -47,7 +46,6 @@ body {
   border-right: 2px solid rgba(255, 255, 255, 0.75);
 }
 
-/* Animation */
 .heading-one {
   animation: typewriter 4s steps(40) 1s 1 normal both,
     blinkTextCursor 500ms steps(40) infinite normal;
@@ -252,4 +250,4 @@ footer {
   #about_me {
     grid-template: 1fr 1fr / 1fr;
   }
-}
+} */
