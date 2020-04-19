@@ -30,7 +30,6 @@ html {
 section {
   height: 100vh;
   padding: 2.5rem;
-  /* min-height: 700px; */
 }
 
 section:first-child {
@@ -71,7 +70,7 @@ section:nth-child(odd) {
   text-shadow: 0.3rem 0.5rem var(--light-grey-color);
 }
 
-.heading {
+#heading {
   font-size: 8rem;
   font-weight: 500;
   color: var(--white-color);
@@ -118,10 +117,10 @@ section:nth-child(odd) {
   justify-content: start;
 }
 
-.about-me-heading {
+#about-me-heading {
   font-size: 6rem;
   text-align: center;
-  margin-top: 5rem;
+  /* margin-top: 4rem; */
   margin-bottom: 5rem;
   color: var(--white-color);
   text-shadow: 0.3rem 0.5rem var(--light-grey-color);
@@ -282,18 +281,30 @@ section:nth-child(odd) {
 /* End of About Me */
 
 /* Questions */
+#question-main-heading {
+  font-size: 6rem;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+  color: var(--white-color);
+  text-shadow: 0.3rem 0.5rem var(--light-grey-color);
+  letter-spacing: 10px;
+  font-weight: 500;
+}
+
 .questions {
   padding: 5rem 0;
   position: relative;
-  min-height: 700px;
+  flex-direction: column;
+  min-height: 750px;
 }
 
 .questions-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
   justify-content: space-around;
+  flex-grow: 1;
 }
 
 .question-bg {
@@ -340,29 +351,145 @@ section:nth-child(odd) {
 }
 /* End of Questions */
 
+/* Prerequisites */
+#prereqs-heading {
+  font-size: 6rem;
+  text-align: center;
+  margin-top: 4rem;
+  color: var(--white-color);
+  text-shadow: 0.3rem 0.5rem var(--light-grey-color);
+  letter-spacing: 10px;
+  font-weight: 500;
+}
+
+#links {
+  display: flex;
+  flex-flow: row;
+  text-align: center;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.link {
+  transition: all 0.8s ease-in-out;
+}
+
+.link.in-view {
+  opacity: 1;
+}
+
+#links a {
+  margin: 0 auto;
+  padding: 0px 30px;
+}
+
+#links img {
+  margin: 0 auto;
+  height: 120px;
+  border-radius: 50%;
+}
+
+#links img:hover {
+  animation: shake 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+#prereqs-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 100%;
+  flex-grow: 1;
+}
+/* End of Prerequisites */
+
+/* Footer */
+.footer {
+  background-color: var(--grey-color);
+  padding: 4rem 0 2rem 0;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-link {
+  font-size: 2rem;
+  color: var(--white-color);
+  margin: 0 2rem;
+  background-color: var(--grey-color);
+  padding: 0.3rem 3rem;
+  letter-spacing: 0.3rem;
+  transition: all 0.2s;
+}
+
+.footer-link:hover {
+  transform: rotate(-10deg);
+  box-shadow: 0 2rem 3rem #000;
+}
+
+.footer-paragraph {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  letter-spacing: 0.2rem;
+  margin-top: 5rem;
+}
+/* End of Footer */
+
 /* Responsiveness */
 
 @media (max-width: 1150px) {
-  .questions {
-    padding: 2rem 0;
-  }
   .question-bg {
-    transform: skewX(0);
+    /* transform: skewX(0); */
     padding: 2rem;
     margin: 2rem;
-  }
-
-  .question {
-    transform: skewX(0);
-    flex-direction: column;
-    align-items: center;
   }
 
   .question-image {
     width: 7rem;
     height: 7rem;
     margin-bottom: 3rem;
-    margin-right: 0px;
+    margin-right: 20px;
   }
 
   .questions-heading {
@@ -383,7 +510,7 @@ section:nth-child(odd) {
     height: 30%;
   }
 
-  .heading {
+  #heading {
     font-size: 6rem;
   }
 
@@ -391,8 +518,9 @@ section:nth-child(odd) {
     font-size: 1rem;
   }
 
-  .about-me-heading {
-    font-size: 6rem;
+  #about-me-heading {
+    font-size: 4rem;
+    font-weight: 200;
   }
 
   .about-me-paragraph {
@@ -414,6 +542,11 @@ section:nth-child(odd) {
   .card-image {
     width: 20rem;
     margin: 40px 0 0 0;
+  }
+
+  #question-main-heading {
+    font-size: 4rem;
+    font-weight: 200;
   }
 
   .question-bg {
@@ -443,6 +576,19 @@ section:nth-child(odd) {
     margin: 0;
     top: 0px;
     right: 0px;
+  }
+
+  #prereqs-heading {
+    font-size: 4rem;
+    font-weight: 200;
+  }
+
+  #links a {
+    padding: 8px 0px;
+  }
+
+  #links img {
+    height: 70px;
   }
 }
 
