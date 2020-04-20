@@ -1,3 +1,29 @@
+//NAVBAR
+const container = document.querySelector(".container");
+
+document.querySelector(".open-navbar").addEventListener("click", () => {
+  container.classList.add("change");
+});
+
+document.querySelector(".close-navbar-icon").addEventListener("click", () => {
+  container.classList.remove("change");
+});
+
+const colors = ["#ffe0b5", "#fac9b8", "#916953", "#cf8e80"];
+
+let i = 0;
+
+Array.from(document.querySelectorAll(".nav-link")).forEach(item => {
+  item.style.cssText = `background-color: ${colors[i++]}`;
+});
+
+Array.from(document.querySelectorAll(".navigation-button")).forEach(item => {
+  item.onclick = () => {
+    item.parentElement.parentElement.classList.toggle("change");
+  };
+});
+
+//CAROUSEL
 //using querySelectorAll to get the carousels from our container.
 var carousels = document.querySelectorAll("#carousels .carousel");
 //using querySelector to get the carousel_nav class from the container
