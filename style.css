@@ -114,14 +114,14 @@ section:nth-child(odd) {
   overflow-y: hidden;
 }
 
-.close-navbar-icon {
+.close-navbar {
   position: absolute;
   top: 2.5rem;
   right: 3rem;
   z-index: 300;
 }
 
-.close-navbar-icon .partition {
+.close-navbar .partition {
   position: absolute;
 }
 
@@ -647,7 +647,7 @@ section:nth-child(odd) {
     height: 0.2rem;
     width: 2.5rem;
   }
-  .open-navbar-icon {
+  .open-navbar {
     top: 2.5rem;
     left: 2.5rem;
   }
@@ -656,7 +656,7 @@ section:nth-child(odd) {
     padding: 0;
   }
 
-  .close-navbar-icon {
+  .close-navbar {
     right: 4rem;
   }
 
@@ -682,7 +682,8 @@ section:nth-child(odd) {
   }
 
   .about-me-paragraph {
-    padding-left: 55px;
+    /* padding-left: 55px; */
+    text-align: center;
   }
 
   #carousel {

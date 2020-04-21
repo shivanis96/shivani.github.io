@@ -1,26 +1,35 @@
 //NAVBAR
 const container = document.querySelector(".container");
 
+//select the hamburger menu and attach a click event to it
 document.querySelector(".open-navbar").addEventListener("click", () => {
+  //add class change to container
   container.classList.add("change");
 });
-
-document.querySelector(".close-navbar-icon").addEventListener("click", () => {
+//select the close menu icon and attach a click event to it
+document.querySelector(".close-navbar").addEventListener("click", () => {
+  //remove class change to container
   container.classList.remove("change");
 });
 
+document.querySelector(".nav-list").addEventListener("click", () => {
+  //remove class change to container
+  container.classList.remove("change");
+}); //array of colors
 const colors = ["#ffe0b5", "#fac9b8", "#916953", "#cf8e80"];
-
+//define the index number of the colors
 let i = 0;
 
-Array.from(document.querySelectorAll(".nav-link")).forEach(item => {
-  item.style.cssText = `background-color: ${colors[i++]}`;
-});
+//select all the links then look through them and assign the bac
 
-Array.from(document.querySelectorAll(".navigation-button")).forEach(item => {
-  item.onclick = () => {
-    item.parentElement.parentElement.classList.toggle("change");
-  };
+//the query selector all method returns an array like objects (node-list)
+//transform node list into an array using Array.from and then look through the  array using the forEach method
+//forEach allows us to look through an array and execute a function for each array item
+// callback function takes one parameter which is the current item
+Array.from(document.querySelectorAll(".nav-link")).forEach(item => {
+  //define background color using style and css text properties
+  //using values from the colors array seperately on each iteration
+  item.style.cssText = `background-color: ${colors[i++]}`;
 });
 
 //CAROUSEL
