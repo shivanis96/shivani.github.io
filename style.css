@@ -236,6 +236,7 @@ section:nth-child(odd) {
   display: flex;
   flex-direction: column;
   justify-content: start;
+  min-height: 550px;
 }
 
 #about-me-heading {
@@ -261,6 +262,8 @@ section:nth-child(odd) {
 
 .cards-wrapper {
   display: flex;
+  flex-flow: row;
+  padding: top 30px;
   justify-content: space-evenly;
 }
 
@@ -271,7 +274,7 @@ section:nth-child(odd) {
 }
 
 .card-image {
-  width: 20rem;
+  width: 25rem;
   border-radius: 0.3rem 0.3rem 0 0;
 }
 
@@ -430,7 +433,7 @@ section:nth-child(odd) {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 8px;
+  padding: 0px;
   /* box-sizing: border-box;
   grid-template-columns: 80px 1fr 80px 1fr 80px;
   justify-items: center; */
@@ -682,6 +685,15 @@ section:nth-child(odd) {
     flex-grow: 1;
   }
 
+  .card-image {
+    width: 20rem;
+    border-radius: 0.3rem 0.3rem 0 0;
+  }
+
+  .cards-wrapper {
+    padding: top 50px;
+  }
+
   .question-bg {
     transform: skewX(0);
     padding: 2rem;
@@ -798,10 +810,6 @@ section:nth-child(odd) {
     padding: 7px 0px;
     height: 40px;
     width: 40px;
-  }
-
-  .about-me {
-    min-height: 600px;
   }
 
   .questions {
