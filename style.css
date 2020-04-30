@@ -251,13 +251,13 @@ section:nth-child(odd) {
 }
 .about-me-container {
   position: relative;
+  height: 100%;
   display: flex;
   flex-flow: row;
   justify-content: flex-start;
   text-align: left;
   align-items: flex-end;
   overflow: hidden;
-  height: inherit;
 }
 
 .cards-wrapper {
@@ -357,6 +357,10 @@ section:nth-child(odd) {
 
 .carousel {
   position: absolute;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   left: 0px;
   top: 0px;
   width: 100%;
@@ -380,7 +384,8 @@ section:nth-child(odd) {
 
 #carousel_content {
   align-items: center;
-  margin: 0px 80px;
+  margin-bottom: 90px;
+  /* margin: 0px 80px; */
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -902,7 +907,7 @@ section:nth-child(odd) {
 
 @media (max-width: 575px) {
   .about-me {
-    min-height: 750px;
+    min-height: 800px;
   }
   .cards-wrapper {
     display: list-item;
