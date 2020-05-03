@@ -890,7 +890,7 @@ section:nth-child(odd) {
   }
 
   #prereqs-heading {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 200;
   }
 
@@ -934,6 +934,11 @@ section:nth-child(odd) {
 
   .card-info {
     font-size: 10px;
+  }
+
+  #prereqs-heading {
+    font-size: 3rem;
+    font-weight: 200;
   }
 }
 
