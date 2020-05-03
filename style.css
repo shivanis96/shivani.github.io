@@ -922,6 +922,9 @@ section:nth-child(odd) {
     flex-direction: column;
     align-items: flex-end;
   } */
+  .questions {
+    min-height: 1300px;
+  }
 
   .card-info {
     font-size: 10px;
